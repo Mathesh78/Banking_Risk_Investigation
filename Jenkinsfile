@@ -16,11 +16,13 @@ pipeline {
         stage('Verify Docker') {
             steps {
                 sh '''
-                    docker --version
-                    docker compose version
-                '''
-            }
-        }
+            echo $DOCKER_HOST
+            docker --version
+            docker compose version
+            docker ps
+        '''
+    }
+}
 
         stage('Build') {
             steps {
