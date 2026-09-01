@@ -6,88 +6,43 @@ ALLOWED_RISK_LEVELS = {
 
 ALLOWED_DECISIONS = {
     "APPROVE",
-    "HUMAN_REVIEW",
-    "REJECT"
+    "HUMAN_REVIEW"
 }
 
 
 def validate_evaluation_output(result):
 
-    # --------------------------------
-    # Check result exists
-    # --------------------------------
-
     if not result:
-
         return False, "Evaluator returned empty output"
-
-
-    # --------------------------------
-    # Check required fields
-    # --------------------------------
 
     required_fields = [
         "risk_level",
         "decision",
+        "reasons",
         "confidence"
     ]
 
     for field in required_fields:
-
         if field not in result:
-
-            return False, (
-                f"Missing required field: {field}"
-            )
-
-
-    # --------------------------------
-    # Validate risk level
-    # --------------------------------
+            return False, f"Missing required field: {field}"
 
     risk_level = result["risk_level"]
-
-    if risk_level not in ALLOWED_RISK_LEVELS:
-
-        return False, (
-            f"Invalid risk level: {risk_level}"
-        )
-
-
-    # --------------------------------
-    # Validate decision
-    # --------------------------------
-
     decision = result["decision"]
-
-    if decision not in ALLOWED_DECISIONS:
-
-        return False, (
-            f"Invalid decision: {decision}"
-        )
-
-
-    # --------------------------------
-    # Validate confidence
-    # --------------------------------
-
     confidence = result["confidence"]
 
-    if not isinstance(
-        confidence,
-        (int, float)
-    ):
+    if risk_level not in ALLOWED_RISK_LEVELS:
+        return False, f"Invalid risk level: {risk_level}"
 
-        return False, (
-            "Confidence must be a number"
-        )
+    if decision not in ALLOWED_DECISIONS:
+        return False, f"Invalid decision: {decision}"
 
+    if not isinstance(confidence, (int, float)):
+        return False, "Confidence must be numeric"
 
     if not 0 <= confidence <= 1:
+        return False, "Confidence must be between 0 and 1"
 
-        return False, (
-            "Confidence must be between 0 and 1"
-        )
-
+    if risk_level == "HIGH" and decision == "APPROVE":
+        return False, "HIGH risk transactions cannot be automatically approved"
 
     return True, "Output validated"
