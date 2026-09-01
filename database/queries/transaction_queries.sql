@@ -1,0 +1,54 @@
+-- INSERT INTO transactions
+-- (
+--     transaction_id,
+--     customer_id,
+--     account_id,
+--     amount,
+--     currency,
+--     merchant,
+--     location,
+--     transaction_type,
+--     status,
+--     transaction_time
+-- )
+-- VALUES
+-- (
+--     'TX1001',
+--     'C1001',
+--     'A1001',
+--     85000.00,
+--     'INR',
+--     'ABC Electronics',
+--     'Dubai',
+--     'INTERNATIONAL_TRANSFER',
+--     'PENDING',
+--     '2026-08-10 10:30:00'
+-- ),
+-- (
+--     'TX1002',
+--     'C1001',
+--     'A1001',
+--     2500.00,
+--     'INR',
+--     'Amazon',
+--     'Chennai',
+--     'PURCHASE',
+--     'COMPLETED',
+--     '2026-08-10 11:00:00'
+-- ),
+-- (
+--     'TX1003',
+--     'C1002',
+--     'A1002',
+--     75000.00,
+--     'INR',
+--     'XYZ Services',
+--     'Mumbai',
+--     'TRANSFER',
+--     'PENDING',
+--     '2026-08-10 12:00:00'
+-- );
+
+SELECT *
+FROM transactions
+WHERE transaction_id = %s;

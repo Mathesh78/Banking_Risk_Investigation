@@ -1,0 +1,11 @@
+Suspicious Transaction Monitoring Policy
+
+Transactions may be considered suspicious when they demonstrate
+unusual amount, unusual location, unusual frequency, or behavior
+inconsistent with the customer's normal activity.
+
+Transactions flagged by the fraud monitoring system must be reviewed
+by the risk investigation team.
+
+High-risk transactions should not be automatically approved
+without appropriate investigation.

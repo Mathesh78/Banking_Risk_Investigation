@@ -1,0 +1,25 @@
+Historical Fraud Investigation Case 003
+
+Case Type:
+Domestic purchase
+
+Transaction Amount:
+INR 2500
+
+Location:
+Chennai
+
+Customer Risk:
+Low
+
+Observed Behavior:
+Customer regularly performs purchases between INR 1000 and INR 5000.
+
+Fraud Indicators:
+No significant fraud indicators.
+
+Investigation Outcome:
+Transaction was completed normally.
+
+Risk Assessment:
+Low risk.

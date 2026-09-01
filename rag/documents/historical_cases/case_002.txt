@@ -1,0 +1,28 @@
+Historical Fraud Investigation Case 002
+
+Case Type:
+International transfer
+
+Transaction Amount:
+INR 78000
+
+Location:
+Singapore
+
+Customer Risk:
+High
+
+Observed Behavior:
+Customer normally performs small domestic purchases.
+A large international transfer was initiated.
+
+Fraud Indicators:
+- Large transaction amount
+- International transfer
+- Significant deviation from normal customer behavior
+
+Investigation Outcome:
+Transaction was escalated to the fraud investigation team.
+
+Risk Assessment:
+High risk.

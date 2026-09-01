@@ -1,0 +1,56 @@
+# =========================
+# FastAPI
+# =========================
+fastapi
+uvicorn[standard]
+pydantic
+
+
+# =========================
+# LangChain / LangGraph
+# =========================
+langchain
+langchain-core
+langgraph
+
+
+# =========================
+# LLM - Groq
+# =========================
+langchain-groq
+groq
+
+
+# =========================
+# MySQL
+# =========================
+mysql-connector-python
+
+
+# =========================
+# Environment variables
+# =========================
+python-dotenv
+
+
+# =========================
+# Celery + Redis
+# =========================
+celery
+redis
+
+
+# =========================
+# RAG
+# =========================
+langchain-community
+langchain-chroma
+chromadb
+sentence-transformers
+langchain-huggingface
+
+
+# =========================
+# HTTP / Web
+# =========================
+requests

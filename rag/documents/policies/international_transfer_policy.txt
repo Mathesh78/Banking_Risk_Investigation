@@ -1,0 +1,11 @@
+International Transfer Policy
+
+International transfers above INR 50,000 require enhanced transaction monitoring.
+
+Transactions involving high-risk jurisdictions require additional review.
+
+International transactions that appear inconsistent with the customer's
+normal transaction behavior should be escalated for investigation.
+
+The compliance team must verify the purpose and source of funds
+when enhanced review is triggered.

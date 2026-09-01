@@ -1,0 +1,30 @@
+Historical Fraud Investigation Case 001
+
+Case Type:
+International transfer
+
+Transaction Amount:
+INR 92000
+
+Location:
+Dubai
+
+Customer Risk:
+Medium
+
+Observed Behavior:
+Customer normally performs domestic transactions below INR 10000.
+A large international transfer was initiated suddenly.
+
+Fraud Indicators:
+- Unusual transaction amount
+- International location
+- Transaction behavior inconsistent with historical activity
+
+Investigation Outcome:
+Transaction was placed under enhanced review.
+The transaction was not automatically approved.
+
+Risk Assessment:
+High risk due to unusual amount, international location,
+and deviation from normal customer behavior.
