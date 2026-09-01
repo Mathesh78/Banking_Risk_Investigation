@@ -83,12 +83,27 @@ EOF
         }
 
 
-        stage('Run Tests') {
+      stage('Run Tests') {
     steps {
         echo 'Running tests...'
 
         sh '''
-            docker compose run --rm api python -m pytest -vv -s
+            docker compose run --rm api sh -c "
+                echo 'Current directory:'
+                pwd
+
+                echo 'Files:'
+                ls -la
+
+                echo 'Python version:'
+                python --version
+
+                echo 'Pytest version:'
+                python -m pytest --version
+
+                echo 'Running pytest:'
+                python -m pytest -vv -s
+            "
         '''
     }
 }
