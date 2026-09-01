@@ -12,6 +12,7 @@ pydantic
 langchain
 langchain-core
 langgraph
+langchain-community
 
 
 # =========================
@@ -41,16 +42,21 @@ redis
 
 
 # =========================
-# RAG
+# RAG / Vector DB
 # =========================
-langchain-community
 langchain-chroma
+langchain-huggingface
 chromadb
 sentence-transformers
-langchain-huggingface
 
 
 # =========================
 # HTTP / Web
 # =========================
 requests
+
+
+# =========================
+# Testing
+# =========================
+pytest

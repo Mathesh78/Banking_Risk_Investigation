@@ -41,11 +41,11 @@ services:
     container_name: banking_mysql
 
     environment:
-      MYSQL_ROOT_PASSWORD: Mathesh@07
-      MYSQL_DATABASE: banking_db
+      MYSQL_ROOT_PASSWORD: ${DB_PASSWORD}
+      MYSQL_DATABASE: ${DB_NAME}
 
     ports:
-      - "3306:3306"
+      - "3307:3306"
 
     volumes:
       - mysql_data:/var/lib/mysql
