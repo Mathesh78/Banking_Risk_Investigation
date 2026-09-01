@@ -84,14 +84,14 @@ EOF
 
 
         stage('Run Tests') {
-            steps {
-                echo 'Running tests...'
+    steps {
+        echo 'Running tests...'
 
-                sh '''
-                    docker compose run --rm api pytest
-                '''
-            }
-        }
+        sh '''
+            docker compose run --rm api python -m pytest -vv -s
+        '''
+    }
+}
     }
 
 
