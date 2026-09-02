@@ -107,6 +107,34 @@ EOF
         '''
     }
 }
+
+stage('Push Docker Image') {
+    steps {
+
+        echo 'Pushing Docker image to Docker Hub...'
+
+        withCredentials([
+            usernamePassword(
+                credentialsId: 'dockerhub-credentials',
+                usernameVariable: 'DOCKERHUB_USERNAME',
+                passwordVariable: 'DOCKERHUB_TOKEN'
+            )
+        ]) {
+
+            sh '''
+                echo "$DOCKERHUB_TOKEN" | docker login \
+                    -u "$DOCKERHUB_USERNAME" \
+                    --password-stdin
+
+                docker tag banking_risk_investigation-api:latest \
+                    $DOCKERHUB_USERNAME/banking-risk-investigation:latest
+
+                docker push \
+                    $DOCKERHUB_USERNAME/banking-risk-investigation:latest
+            '''
+        }
+    }
+}
     }
 
 
