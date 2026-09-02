@@ -135,6 +135,23 @@ stage('Push Docker Image') {
         }
     }
 }
+
+stage('Deploy to EC2') {
+    steps {
+        echo 'Deploying latest image to EC2...'
+
+        sshagent(credentials: ['ec2-ssh-key']) {
+            sh '''
+                ssh -o StrictHostKeyChecking=no ubuntu@13.61.100.176 "
+                    cd ~/banking-risk &&
+                    docker compose pull &&
+                    docker compose up -d &&
+                    docker compose ps
+                "
+            '''
+        }
+    }
+}
     }
 
 
