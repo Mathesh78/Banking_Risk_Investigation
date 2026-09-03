@@ -165,10 +165,5 @@ stage('Deploy to EC2') {
             echo 'CI pipeline failed.'
         }
 
-        always {
-            sh '''
-                rm -f .env
-            '''
-        }
     }
 }
